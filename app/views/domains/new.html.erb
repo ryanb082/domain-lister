@@ -1,8 +1,8 @@
 <h1>Enter Your Domains Here</h1>
 
 <div class='container'>
- <form class='form-inline'>
-  <%= form_for @domain do |f|%>
+ 
+  <%= form_for @domain, html: { class: 'form-inline' } do |f| %>
   <div class='form-group'>
     <%= f.label :domain %>
     <%= f.text_field :domain %>
@@ -25,3 +25,4 @@
 
 </div>
 
+<form class='form-inline'>

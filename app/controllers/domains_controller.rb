@@ -7,7 +7,9 @@ class DomainsController < ApplicationController
   def create
   @domain = Domain.new(domain_params)
 
+
     if @domain.save
+
       flash[:notice] = "Your domain was listed"
       redirect_to root_path
     else
