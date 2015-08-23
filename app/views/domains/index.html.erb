@@ -1,0 +1,24 @@
+<div class='container'>
+  <table class='table'>
+    <caption>Domain Listings</caption>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Domain</th>
+        <th>Majestic Topic</th>
+        <th>Site Topic</th>
+        <th>Links</th>
+      <tr>
+    </thead>
+    <tbody>
+      <%= @domains.each do |domain| %>
+        <tr>
+          <td><%= domain.domain %></td>
+          <td><%= domain.majestic_topic %></td>
+          <td><%= domain.site_topic %></td>
+          <td><%= domain.links %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>  
+</div>
