@@ -1,0 +1,27 @@
+<h1>Enter Your Domains Here</h1>
+
+<div class='container'>
+ <form class='form-inline'>
+  <%= form_for @domain do |f|%>
+  <div class='form-group'>
+    <%= f.label :domain %>
+    <%= f.text_field :domain %>
+  </div>
+   
+  <div class='form-group'>
+    <%= f.label :majestic_topic %>
+    <%= f.text_field :majestic_topic %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :site_topic %>
+    <%= f.text_field :site_topic %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :links %>
+    <%= f.text_field :links %>
+  </div>
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+  <% end %>
+
+</div>
+
