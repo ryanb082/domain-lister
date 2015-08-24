@@ -1,5 +1,7 @@
 class DomainsController < ApplicationController
 
+http_basic_authenticate_with_name: 'adamryan', password: 'seokings'
+
   def index
     @domains = Domain.all
   end
