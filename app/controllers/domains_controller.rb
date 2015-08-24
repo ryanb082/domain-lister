@@ -31,7 +31,7 @@ http_basic_authenticate_with name: 'adamryan', password: 'seokings'
   private
 
   def domain_params
-    params.require(:domain).permit(:majestic_topic, :site_topic, :links)
+    params.require(:domain).permit(:domain,:majestic_topic, :site_topic, :links)
   end
 
 end
