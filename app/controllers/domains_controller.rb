@@ -45,7 +45,7 @@ http_basic_authenticate_with name: 'adamryan', password: 'seokings'
 
   def import
     Domain.import(params[:file])
-    redirect_to root_path, notice: "Domains added successully."
+    redirect_to root_url, notice: "Domains added successully."
   end
 
   private
