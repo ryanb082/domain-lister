@@ -16,6 +16,7 @@
           <td><%= domain.majestic_topic %></td>
           <td><%= domain.site_topic %></td>
           <td><%= domain.links %></td>
+          <td><%= link_to 'Edit', edit_domain_path(domain), class: 'btn btn-primary' %>
         </tr>
       <% end %>
     </tbody>

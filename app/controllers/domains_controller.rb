@@ -20,12 +20,22 @@ http_basic_authenticate_with name: 'adamryan', password: 'seokings'
   end
 
   def new
-    @domain = Domain.new
+    @domain = Domain.new   
+  end
 
-    
+  def edit
+    @domain = Domain.find(params[:id])
+
   end
 
   def update
+    @domain = Domain.find(params[:id])
+    if @domain.update(domain_params)
+      flash[:notice] = "This domain was updated."
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private
