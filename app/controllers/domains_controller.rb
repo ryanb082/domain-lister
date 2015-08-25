@@ -38,6 +38,11 @@ http_basic_authenticate_with name: 'adamryan', password: 'seokings'
     end
   end
 
+  def destroy
+    @domain = Domain.find(params[:id]).destroy
+    redirect_to root_path
+  end
+
   private
 
   def domain_params

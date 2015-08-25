@@ -17,6 +17,7 @@
           <td><%= domain.site_topic %></td>
           <td><%= domain.links %></td>
           <td><%= link_to 'Edit', edit_domain_path(domain), class: 'btn btn-primary' %>
+          <td><%= link_to 'Delete', domain, method: :delete, data: {cofirm: "Are You Sure?" } %>
         </tr>
       <% end %>
     </tbody>
