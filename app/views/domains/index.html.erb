@@ -1,3 +1,12 @@
+<% if current_user.super_admin? %>
+<h3>Welcome Super Admin</h3>
+<% else current_user.admin? %>
+<h2>Welcome, admin </h2>
+<% end %>
+
+
+
+
 <div class='container'>
   <table class='table'>
     

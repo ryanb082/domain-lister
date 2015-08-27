@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827205337) do
+ActiveRecord::Schema.define(version: 20150827222902) do
 
   create_table "domains", force: :cascade do |t|
     t.string  "domain"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20150827205337) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
+    t.string  "email"
+    t.string  "password_digest"
+    t.integer "access_level",    default: 0
   end
 
 end
