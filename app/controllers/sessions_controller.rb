@@ -3,11 +3,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.where(email: params(:email)).first
+
+    user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
-      session[:user_id] = @user.id 
+      session[:user_id] = user.id 
       flash[:notice] = "Welcome, you have logged in."
-      redirects_to root_path
+      redirect_to domains_path
     else 
       flash[:notice] = "Your email or password was incorrect."
       redirect_to login_path

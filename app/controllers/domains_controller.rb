@@ -1,6 +1,6 @@
 class DomainsController < ApplicationController
 
-http_basic_authenticate_with name: 'adamryan', password: 'seokings'
+before_action :require_user 
 
   def index
     @domains = Domain.all
