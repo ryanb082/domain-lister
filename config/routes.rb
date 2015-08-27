@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
  
-
+get '/login' => 'sessions#new'
+post '/login' => 'sessions#create'
+get '/logout' => 'sessions#destroy'
+get '/register' => 'users#new'
+post '/users' => 'users#create'
  
  
 
