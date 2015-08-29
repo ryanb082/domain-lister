@@ -13,7 +13,7 @@ before_action :require_user
     if @domain.save
 
       flash[:notice] = "Your domain was listed"
-      redirect_to root_path
+      redirect_to domains_path
     else
       render :new
     end
@@ -32,7 +32,7 @@ before_action :require_user
     @domain = Domain.find(params[:id])
     if @domain.update(domain_params)
       flash[:notice] = "This domain was updated."
-      redirect_to root_path
+      redirect_to domains_path
     else
       render :edit
     end
@@ -40,12 +40,12 @@ before_action :require_user
 
   def destroy
     @domain = Domain.find(params[:id]).destroy
-    redirect_to root_path
+    redirect_to domains_path
   end
 
   def import
     Domain.import(params[:file])
-    redirect_to root_url, notice: "Domains added successully."
+    redirect_to domains_path, notice: "Domains added successully."
   end
 
   private
